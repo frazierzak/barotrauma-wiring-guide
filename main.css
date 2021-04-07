@@ -1,0 +1,180 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+  transition: color 150ms ease-in;
+}
+
+a:hover {
+  color: #bb3b71;
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  font-family: 'Kiwi Maru', serif;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 15%;
+  height: 100vh;
+  background: #f0f0f0;
+  -webkit-box-shadow: 5px 0px 15px -1px rgba(0,0,0,0.35); 
+  box-shadow: 5px 0px 15px -1px rgba(0,0,0,0.35);
+}
+
+.sidebar .logo {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  padding: 20px;
+}
+
+.sidebar .logo h1 {
+  font-weight: 300;
+}
+
+.sidebar .logo h1 strong {
+  font-weight: 500;
+}
+
+.sidebar .seperator {
+  width: 100%;
+  height: 1px;
+  background: #c6c6c6;
+  padding: 0;
+}
+
+.sidebar .search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.sidebar .search input {
+  width: 75%;
+}
+
+.sidebar .search a {
+  width: 20%;
+  text-align: center;
+}
+
+.sidebar .navigation {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow-y: scroll;
+}
+
+.sidebar .navigation li > ul {
+  padding: 0 0 0 15px;
+}
+
+.sidebar .navigation li {
+  list-style: none;
+}
+
+.sidebar .navigation li.chapter {
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  background: #474857;
+  color: #e1e1e1;
+  padding: 20px 40px 20px 40px;
+  line-height: 28px;
+}
+
+.content h2 {
+  margin: 0 0 20px 0;
+  border-bottom: 1px solid #e1e1e1;
+  padding: 0 0 10px 0;
+}
+
+.content p {
+  margin: 0 0 15px 0;
+}
